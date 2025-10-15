@@ -30,4 +30,4 @@ int get_protocol_id_by_str(char* name);
 void print_tool_info();
 u64 get_boot_nano_time();
 
-void lower_str(char *str) ;
+void lower_str(char *str);

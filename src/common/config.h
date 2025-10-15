@@ -17,7 +17,7 @@
 #define ENABLE_RULE_LOGGING
 
 // Counts packets sent back to the client towards "forwarded" stat counter. 
-//#define STATS_COUNT_FWD_BACK
+#define STATS_COUNT_FWD_BACK
 
 // If enabled, performs a FIB lookup on the route table when forwarding packets.
 // Otherwise, the ethernet source and destination MAC addresses are swapped.
