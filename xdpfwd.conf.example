@@ -7,7 +7,7 @@ no_stats = false;
 stats_per_second = false;
 stdout_update_time = 1000;
 
-forwarding = (
+rules = (
     {
         enabled = true;
         log = true;
