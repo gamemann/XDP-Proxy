@@ -97,8 +97,6 @@ make
 sudo make install
 ```
 
-![Script Build Demo](./images/build_make.gif)
-
 ## 💻 CLI Usage
 The following command line arguments are supported when running the proxy.
 
@@ -275,15 +273,20 @@ I just wanted to share other open source projects I've made which also utilize X
 ### [XDP Firewall](https://github.com/gamemann/XDP-Firewall)
 A *stateless* firewall that attaches to the [XDP](https://www.iovisor.org/technology/xdp) hook in the Linux kernel using [(e)BPF](https://ebpf.io/) for fast packet processing.
 
-This firewall is designed for performance and flexibility, offering features such as dynamic filtering, source IP blocking, IP range dropping, and real-time packet counters. This makes it a powerful tool for network engineers, security professionals, and anyone interested in XDP or high-performance firewalling.
+![XDP Firewall Demo](./images/demo-xdpfirewall.gif)
+
+### [XDP Stats](https://github.com/gamemann/xdpstats-rs)
+A packet and byte counting tool that utilizes XDP and AF_XDP sockets for calculating stats. This project is used for benchmarking and testing XDP programs and AF_XDP socket performance.
+
+![XDP Stats Demo](./images/demo-xdpstats.gif)
+
+### [Packet Batch (AF_XDP)](https://github.com/Packet-Batch/pktbatch-rs)
+A tool that generates and sends packets using technologies such as **fast [AF_XDP](https://docs.kernel.org/networking/af_xdp.html) Linux sockets**. This is used for penetration testing including [Denial of Service](https://www.cloudflare.com/learning/ddos/glossary/denial-of-service/) (DoS), network monitoring, and more!
+
+![Packet Batch Demo](./images/demo-pktbatch.gif)
 
 ### [Kilimanjaro](https://github.com/gamemann/Kilimanjaro)
 This is a complex packet processing/forwarding/dropping project I made for a gaming community I was a part of that utilizes XDP, AF_XDP, and the IPIP network protocol. I no longer work on/maintain the project, but the source code may be very helpful to other XDP developers, especially when it comes to manipulating packets inside of XDP and such.
-
-### [Packet Batch (AF_XDP)](https://github.com/Packet-Batch/PB-AF-XDP)
-An application that utilizes fast [AF_XDP](https://docs.kernel.org/networking/af_xdp.html) Linux sockets to generate and send network packets. This is used for penetration testing including [Denial of Service](https://www.cloudflare.com/learning/ddos/glossary/denial-of-service/) (DoS), network monitoring, and more!
-
-While this application doesn't utilize native XDP or (e)BPF, I do feel it should be mentioned here. AF_XDP sockets are very fast and often used with raw XDP programs via the `bpf_redirect_map()` function call (also see my [XDP Stats](https://github.com/gamemann/XDP-Stats) project which calculates stats in raw XDP and AF_XDP programs).
 
 ## 🙌 Credits
 * [Christian Deacon](https://github.com/gamemann) - Creator.
